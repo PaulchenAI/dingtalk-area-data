@@ -17,7 +17,6 @@ type RegionPayload = {
 };
 
 const REQUIRED_FIELDS = [
-  "区域层级",
   "省份",
   "城市",
   "区县",
@@ -35,7 +34,6 @@ function getActiveSheet() {
 
 function buildRegionFields(region: RegionPayload) {
   return {
-    "区域层级": region.levelName,
     "省份": region.provinceName,
     "城市": region.cityName || "",
     "区县": region.districtName || "",
