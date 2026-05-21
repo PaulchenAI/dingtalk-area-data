@@ -1,19 +1,26 @@
-import React, { useEffect } from 'react';
-import ReactDOM from 'react-dom/client';
-import { initScript } from 'dingtalk-docs-cool-app';
+import React, { useEffect } from "react";
+import ReactDOM from "react-dom/client";
+import { initScript } from "dingtalk-docs-cool-app";
+
+declare const process: any;
 
 function App() {
   useEffect(() => {
-    // 在开发环境中使用正确的URL指向编译后的script.code.js文件
-    initScript({ 
-      scriptUrl: new URL(`${window.location.origin}/static/js/script.code.js`, window.location.href) 
+    const publicUrl = process?.env?.PUBLIC_URL || "";
+
+    initScript({
+      scriptUrl: new URL(`${publicUrl}/static/js/script.code.js`, window.location.href),
+      onError: (error) => {
+        console.error("init script failed:", error);
+      },
     });
   }, []);
-  
+
   return null;
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root_script') as HTMLElement);
+const root = ReactDOM.createRoot(document.getElementById("root_script")!);
+
 root.render(
   <React.StrictMode>
     <App />
