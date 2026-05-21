@@ -1,0 +1,17 @@
+{
+  "dev": {
+    "id": "dingdocs-123",
+    "name": "边栏插件"
+  },
+  "base": {
+    "scriptService": {
+      "url": "script.html"
+    },
+    "sidebars": [
+      {
+        "url": "ui.html",
+        "title": "AI表格边栏插件"
+      }
+    ]
+  }
+}

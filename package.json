@@ -2,6 +2,7 @@
   "name": "dingtalk-docs-cool-app-demo",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://paulchenai.github.io/dingtalk-area-data",
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
