@@ -318,6 +318,9 @@ function App() {
         <div className="record-hint">
           当前：{selectedRowNumber ? `第 ${selectedRowNumber} 行` : "未选中任何行"}
         </div>
+        <div className="record-hint">
+          点击刷新会自动添加“省份 / 城市 / 区县”表格列；如果已有列，请检查列名是否一致。
+        </div>
       </section>
 
       <section className="card">
